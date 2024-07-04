@@ -1,0 +1,14 @@
+{% load static %}
+{% if message %}
+<div class="message">
+     {% for message in message%}
+     <div class="alert alert-dicmissible alert-danger fade show mt-3{%
+        if message.tags %}alert-{{message.tags}} {% endif %}"
+        role='alert' data-mdb-position="top-right">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" 
+        aria-label="close"></button>
+     </div>
+     {%endfor%}
+    </div>
+    {%endif%}
